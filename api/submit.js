@@ -33,7 +33,7 @@ module.exports = async function handler(req, res) {
     await notion.pages.create({
       parent: { database_id: databaseId },
       properties: {
-        '이름': {
+        '고객명': {
           title: [
             {
               text: {
@@ -42,20 +42,19 @@ module.exports = async function handler(req, res) {
             },
           ],
         },
-        '연락처': {
-          rich_text: [
-            {
-              text: {
-                content: phone,
-              },
-            },
-          ],
+        '전화번호': {
+          phone_number: phone,
         },
         '프로그램': {
+          select: {
+            name: '필라테스',
+          },
+        },
+        '문의내용': {
           rich_text: [
             {
               text: {
-                content: program,
+                content: `상담 희망: ${program}`,
               },
             },
           ],

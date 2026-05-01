@@ -2,7 +2,12 @@
   "name": "pilates-landing",
   "version": "1.0.0",
   "description": "Pilates Landing Page with Notion API Integration",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
-    "@notionhq/client": "^2.2.14"
+    "@notionhq/client": "^2.2.14",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
   }
 }
