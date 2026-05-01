@@ -684,3 +684,42 @@ details[open] .faq-icon {
   margin-bottom: 16px;
   font-size: 18px;
 }
+
+/* Inquiry Form */
+.inquiry-form-container {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 480px;
+  margin: 40px auto 64px;
+  color: var(--color-dark);
+  text-align: left;
+}
+.inquiry-form-container h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.inquiry-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  background-color: #fafafa;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-main);
+}
+.w-full {
+  width: 100%;
+}

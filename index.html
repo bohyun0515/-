@@ -305,14 +305,27 @@
         <h2 class="cta-headline">가장 완벽한 변화는 오늘 시작됩니다</h2>
         <p class="cta-desc mt-4 mb-8">이번 달 한정 프리미엄 상담 혜택을 놓치지 마세요.<br>선착순 마감 전, 지금 바로 예약하세요.</p>
         
-        <div class="flex-center gap-4 mb-16 wrap">
-          <a href="#" class="cta-button primary-fill">
-            상담 예약 신청하기
-            <!-- 나중에 상담신청 링크로 교체 예정 -->
-          </a>
-          <a href="http://pf.kakao.com/_cxhZeK/chat" target="_blank" class="cta-button outline">
-            카카오톡 문의
-          </a>
+        <div class="inquiry-form-container">
+          <h3>1:1 상담 예약 신청</h3>
+          <form action="#" method="POST" onsubmit="alert('신청이 완료되었습니다! 담당자가 확인 후 연락드리겠습니다.'); return false;">
+            <div class="form-group">
+              <label for="name">성함</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="홍길동" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">연락처</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="010-1234-5678" required>
+            </div>
+            <div class="form-group">
+              <label for="program">관심 프로그램</label>
+              <select id="program" name="program" class="form-input">
+                <option>1:1 프라이빗 레슨</option>
+                <option>2:1 듀엣 레슨</option>
+                <option>4:1 그룹 레슨</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary mt-6 w-full" style="padding: 16px; border: none; font-size: 16px; cursor: pointer;">무료 상담 신청하기</button>
+          </form>
         </div>
 
         <div class="footer-info">
