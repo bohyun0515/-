@@ -318,7 +318,7 @@
             </div>
             <div class="form-group">
               <label for="program">관심 프로그램</label>
-              <select id="program" name="program" class="form-input">
+              <select id="inquiry-program" name="program" class="form-input">
                 <option>1:1 프라이빗 레슨</option>
                 <option>2:1 듀엣 레슨</option>
                 <option>4:1 해피아워 그룹</option>
@@ -339,7 +339,7 @@
 
               const name = document.getElementById('name').value;
               const phone = document.getElementById('phone').value;
-              const program = document.getElementById('program').value;
+              const program = document.getElementById('inquiry-program').value;
 
               try {
                 const response = await fetch('/api/submit', {

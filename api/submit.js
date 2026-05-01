@@ -6,10 +6,21 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, phone, program } = req.body;
+    let parsedBody = req.body;
+    if (typeof req.body === 'string') {
+      try {
+        parsedBody = JSON.parse(req.body);
+      } catch (e) {
+        console.error("JSON 파싱 에러:", e);
+      }
+    }
+
+    const { name, phone, program } = parsedBody || {};
 
     if (!name || !phone || !program) {
-      return res.status(400).json({ message: '모든 필드를 입력해주세요.' });
+      return res.status(400).json({ 
+        message: '모든 필드를 입력해주세요. (디버깅: ' + JSON.stringify(parsedBody) + ')' 
+      });
     }
 
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
