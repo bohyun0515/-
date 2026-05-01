@@ -1,0 +1,8 @@
+{
+  "name": "pilates-landing",
+  "version": "1.0.0",
+  "description": "Pilates Landing Page with Notion API Integration",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14"
+  }
+}
